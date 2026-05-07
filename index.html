@@ -1,111 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SizzleBox</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SizzleBox — Loaded Sandwiches That Hit Different</title>
+<meta name="description" content="Lagos' favourite sandwich spot. Fresh. Juicy. Delivered Hot." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="bg-[#1a0f0a] text-white font-body">
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h1 class="logo">SIZZLE<span>BOX</span></h1>
-    <nav id="nav">
-      <a href="#">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="https://wa.me/2348000000000" class="btn">Order Now</a>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar flex justify-between items-center px-6 py-4 bg-[#2a1810] sticky top-0 z-50">
+  <h1 class="logo font-display text-2xl tracking-wider">SIZZLE<span class="text-[#ff5722]">BOX</span></h1>
+  <nav id="nav" class="hidden md:flex gap-6">
+    <a href="#home" class="hover:text-[#ff5722]">Home</a>
+    <a href="#menu" class="hover:text-[#ff5722]">Menu</a>
+    <a href="#gallery" class="hover:text-[#ff5722]">Gallery</a>
+    <a href="#about" class="hover:text-[#ff5722]">About</a>
+    <a href="#contact" class="hover:text-[#ff5722]">Contact</a>
+  </nav>
+  <a href="https://wa.me/2348000000000" class="bg-[#ff5722] px-4 py-2 rounded-full font-semibold hover:bg-[#e64a19]">🔥 Order Now</a>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <p class="tag">🔥 Lagos' Favourite Sandwich Spot</p>
-      <h1>Loaded Sandwiches <br><span>That Hit Different 🔥</span></h1>
-      <p>Fresh. Juicy. Delivered Hot.</p>
-      <div class="hero-buttons">
-        <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
-        <a href="#menu" class="btn-outline">View Menu</a>
-      </div>
+<!-- HERO -->
+<section id="home" class="hero-bg text-center px-6 py-20">
+  <span class="badge inline-block bg-[#ff5722]/20 text-[#ff5722] px-4 py-1 rounded-full text-sm mb-4">🔥 Lagos' Favourite Sandwich Spot</span>
+  <h2 class="font-display text-5xl md:text-7xl mb-4">Loaded Sandwiches<br/>That Hit Different 🔥</h2>
+  <p class="font-script text-2xl text-[#ffb74d] mb-6">Fresh. Juicy. Delivered Hot.</p>
+  <div class="flex justify-center gap-4 flex-wrap">
+    <a href="https://wa.me/2348000000000" class="bg-[#ff5722] px-6 py-3 rounded-full font-bold">🔥 Order Now</a>
+    <a href="#menu" class="border-2 border-white px-6 py-3 rounded-full font-bold">📋 View Menu</a>
+  </div>
+  <p class="mt-8 text-3xl font-display">2,500+ <span class="text-base font-body text-gray-300">Happy Customers</span></p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="py-16 px-6 text-center">
+  <h3 class="font-script text-2xl text-[#ff5722]">Browse Our</h3>
+  <h2 class="font-display text-4xl mb-10">Menu Categories</h2>
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+    <div class="menu-card bg-[#2a1810] p-6 rounded-xl"><div class="text-4xl">🥪</div><h4 class="font-bold mt-2">Sandwiches</h4><p class="text-sm text-gray-400">Loaded & Toasted</p></div>
+    <div class="menu-card bg-[#2a1810] p-6 rounded-xl"><div class="text-4xl">🌯</div><h4 class="font-bold mt-2">Shawarma</h4><p class="text-sm text-gray-400">Spiced to Perfection</p></div>
+    <div class="menu-card bg-[#2a1810] p-6 rounded-xl"><div class="text-4xl">🍱</div><h4 class="font-bold mt-2">Box Meals</h4><p class="text-sm text-gray-400">Full & Satisfying</p></div>
+    <div class="menu-card bg-[#2a1810] p-6 rounded-xl"><div class="text-4xl">🍟</div><h4 class="font-bold mt-2">Sides</h4><p class="text-sm text-gray-400">Perfect Add-ons</p></div>
+    <div class="menu-card bg-[#2a1810] p-6 rounded-xl"><div class="text-4xl">🥤</div><h4 class="font-bold mt-2">Drinks</h4><p class="text-sm text-gray-400">Chilled & Refreshing</p></div>
+  </div>
+</section>
+
+<!-- FEATURED MENU -->
+<section id="menu" class="py-16 px-6 text-center bg-[#2a1810]">
+  <h3 class="font-script text-2xl text-[#ff5722]">Popular Picks</h3>
+  <h2 class="font-display text-4xl mb-8">Featured Menu</h2>
+  <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-16 px-6 text-center">
+  <h3 class="font-script text-2xl text-[#ff5722]">Our Gallery</h3>
+  <h2 class="font-display text-4xl mb-8">Gallery</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400" class="rounded-xl" alt="Sandwich"/>
+    <img src="https://images.unsplash.com/photo-1633321702518-7feccafb94d5?w=400" class="rounded-xl" alt="Shawarma"/>
+    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400" class="rounded-xl" alt="Fries"/>
+    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" class="rounded-xl" alt="Box meal"/>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-6 text-center bg-gradient-to-r from-[#ff5722] to-[#e64a19]">
+  <h2 class="font-display text-4xl mb-4">Get It While It's Hot! 🔥</h2>
+  <p class="mb-6">Craving something delicious? Your next favorite meal is just a click away.</p>
+  <div class="flex justify-center gap-4 flex-wrap">
+    <a href="https://wa.me/2348000000000" class="bg-[#25D366] px-6 py-3 rounded-full font-bold">💬 Order on WhatsApp</a>
+    <a href="#" class="bg-white text-[#ff5722] px-6 py-3 rounded-full font-bold">🛵 Order on Delivery App</a>
+  </div>
+  <p class="mt-6 text-sm">⚡ Fast delivery across Lagos • 🔥 Hot meals, always</p>
+</section>
+
+<!-- STATS -->
+<section class="py-16 px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-5xl mx-auto">
+  <div><h3 class="font-display text-4xl text-[#ff5722]">10,000+</h3><p>Orders Delivered</p></div>
+  <div><h3 class="font-display text-4xl text-[#ff5722]">4.9/5</h3><p>Customer Rating</p></div>
+  <div><h3 class="font-display text-4xl text-[#ff5722]">12</h3><p>Menu Categories</p></div>
+  <div><h3 class="font-display text-4xl text-[#ff5722]">30-45 min</h3><p>Average Delivery</p></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-16 px-6 text-center bg-[#2a1810]">
+  <h3 class="font-script text-2xl text-[#ff5722]">What Our Customers Say</h3>
+  <h2 class="font-display text-4xl mb-8">Testimonials</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div class="bg-[#1a0f0a] p-6 rounded-xl"><p>"Best sandwich I've had in Lagos! The Big Pop is a beast."</p><p class="mt-4 font-bold">Tunde A. — VI, Lagos</p><p class="text-yellow-400">★★★★★</p></div>
+    <div class="bg-[#1a0f0a] p-6 rounded-xl"><p>"Chicken shawarma is mad nice. I order almost every week."</p><p class="mt-4 font-bold">Sarah M. — Lekki</p><p class="text-yellow-400">★★★★☆</p></div>
+    <div class="bg-[#1a0f0a] p-6 rounded-xl"><p>"Finally a spot that gets sandwiches right. Fast delivery too!"</p><p class="mt-4 font-bold">Kola D. — Yaba</p><p class="text-yellow-400">★★★★★</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 px-6 max-w-5xl mx-auto">
+  <h3 class="font-script text-2xl text-[#ff5722]">About Us</h3>
+  <h2 class="font-display text-4xl mb-4">About SizzleBox</h2>
+  <p class="mb-3">SizzleBox is Lagos' go-to spot for bold, flavorful, and seriously satisfying sandwiches, shawarma, and box meals. We don't just make food — we craft experiences.</p>
+  <p class="mb-6">Every meal is made with premium ingredients, packed with flavor, and delivered hot to your doorstep.</p>
+  <div class="flex flex-wrap gap-3 mb-6">
+    <span class="bg-[#2a1810] px-4 py-2 rounded-full">✓ Fresh Ingredients</span>
+    <span class="bg-[#2a1810] px-4 py-2 rounded-full">✓ Fast Delivery</span>
+    <span class="bg-[#2a1810] px-4 py-2 rounded-full">✓ Bold Flavors</span>
+  </div>
+  <div class="flex gap-4 flex-wrap">
+    <a href="https://instagram.com" class="bg-[#E1306C] px-5 py-2 rounded-full font-semibold">📸 Follow on Instagram</a>
+    <a href="https://wa.me/2348000000000" class="bg-[#25D366] px-5 py-2 rounded-full font-semibold">💬 Chat on WhatsApp</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 px-6 bg-[#2a1810]">
+  <div class="text-center mb-10">
+    <h3 class="font-script text-2xl text-[#ff5722]">Get In Touch</h3>
+    <h2 class="font-display text-4xl">Contact Us</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div class="space-y-4">
+      <div class="bg-[#1a0f0a] p-4 rounded-xl"><strong>📞 Phone</strong><p>+234 901 234 5678</p></div>
+      <a href="https://wa.me/2348000000000" class="block bg-[#1a0f0a] p-4 rounded-xl"><strong>💬 WhatsApp</strong><p>+234 901 234 5678</p></a>
+      <div class="bg-[#1a0f0a] p-4 rounded-xl"><strong>✉ Email</strong><p>hello@sizzlebox.ng</p></div>
+      <div class="bg-[#1a0f0a] p-4 rounded-xl"><strong>📍 Address</strong><p>Lekki Phase 1, Lagos, Nigeria</p></div>
+      <div class="bg-[#1a0f0a] p-4 rounded-xl"><strong>🕒 Hours</strong><p>Mon–Sun • 11am – 11pm</p></div>
     </div>
-    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Sandwich">
-  </section>
+    <form class="bg-[#1a0f0a] p-6 rounded-xl space-y-3">
+      <h3 class="font-display text-2xl">Send us a message</h3>
+      <p class="text-sm text-gray-400">We'll get back to you within 24 hours.</p>
+      <input type="text" placeholder="Your name" class="w-full p-3 rounded bg-[#2a1810] border border-gray-700"/>
+      <input type="email" placeholder="Your email" class="w-full p-3 rounded bg-[#2a1810] border border-gray-700"/>
+      <input type="text" placeholder="Subject" class="w-full p-3 rounded bg-[#2a1810] border border-gray-700"/>
+      <textarea placeholder="Your message" rows="4" class="w-full p-3 rounded bg-[#2a1810] border border-gray-700"></textarea>
+      <button type="submit" class="w-full bg-[#ff5722] py-3 rounded-full font-bold">Send Message 🔥</button>
+    </form>
+  </div>
+</section>
 
-  <!-- CATEGORIES -->
-  <section class="categories">
-    <h2>Menu Categories</h2>
-    <div class="category-grid">
-      <div class="card">🍔 Sandwiches</div>
-      <div class="card">🌯 Shawarma</div>
-      <div class="card">🍟 Box Meals</div>
-      <div class="card">🍗 Sides</div>
-      <div class="card">🥤 Drinks</div>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer class="bg-[#0f0805] py-10 px-6 grid md:grid-cols-4 gap-8 text-sm">
+  <div>
+    <h3 class="font-display text-2xl">SIZZLE<span class="text-[#ff5722]">BOX</span></h3>
+    <p class="mt-2">Loaded Sandwiches That Hit Different 🔥</p>
+    <p class="mt-4 text-gray-500">© 2025 SizzleBox. All rights reserved.<br/>Designed with ❤ for sandwich lovers in Lagos.</p>
+  </div>
+  <div>
+    <h4 class="font-bold mb-3">Quick Links</h4>
+    <p><a href="#home">Home</a></p>
+    <p><a href="#menu">Menu</a></p>
+    <p><a href="#gallery">Gallery</a></p>
+    <p><a href="#about">About</a></p>
+  </div>
+  <div>
+    <h4 class="font-bold mb-3">Menu Categories</h4>
+    <p>Sandwiches</p><p>Shawarma</p><p>Box Meals</p><p>Sides</p><p>Drinks</p>
+  </div>
+  <div>
+    <h4 class="font-bold mb-3">Contact</h4>
+    <p>📞 +234 901 234 5678</p>
+    <p>💬 +234 901 234 5678</p>
+    <p>✉ hello@sizzlebox.ng</p>
+    <p>📍 Lagos, Nigeria</p>
+  </div>
+</footer>
 
-  <!-- FEATURED -->
-  <section class="menu" id="menu">
-    <h2>Featured Menu</h2>
-    <div class="menu-grid" id="menu-grid"></div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery" id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="">
-      <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086" alt="">
-      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="">
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="contact">
-    <h2>Get It While It's Hot!</h2>
-    <p>Your next favorite meal is just a click away</p>
-    <div>
-      <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
-      <a href="#" class="btn-outline">Delivery App</a>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div>10,000+ <span>Orders</span></div>
-    <div>4.9/5 <span>Rating</span></div>
-    <div>12 <span>Categories</span></div>
-    <div>30-45 min <span>Delivery</span></div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <h2>Testimonials</h2>
-    <div class="test-grid">
-      <div class="test-card">"Best sandwich I've had!" ⭐⭐⭐⭐⭐</div>
-      <div class="test-card">"Fast delivery and tasty!" ⭐⭐⭐⭐⭐</div>
-      <div class="test-card">"Absolutely delicious!" ⭐⭐⭐⭐⭐</div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div>
-      <h2>About SizzleBox</h2>
-      <p>We serve bold, flavorful sandwiches made with fresh ingredients.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <h3>SizzleBox</h3>
-    <p>Loaded Sandwiches That Hit Different 🔥</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
