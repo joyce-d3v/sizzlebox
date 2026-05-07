@@ -1,1 +1,58 @@
+/* SIZZLEBOX — Custom CSS */
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero gradient background */
+.hero-bg {
+  background:
+    radial-gradient(ellipse at top, rgba(249, 115, 22, 0.15), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(234, 88, 12, 0.1), transparent 60%),
+    #0a0a0a;
+}
+
+/* Menu card hover */
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -10px rgba(249, 115, 22, 0.3);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-signature  { background: #f97316; color: white; }
+.badge-bestseller { background: #facc15; color: #422006; }
+.badge-new        { background: #22c55e; color: white; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar         { width: 10px; }
+::-webkit-scrollbar-track   { background: #0a0a0a; }
+::-webkit-scrollbar-thumb   { background: #f97316; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #ea580c; }
 
