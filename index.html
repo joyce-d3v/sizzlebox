@@ -1,29 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SizzleBox — Loaded Sandwiches That Hit Different</title>
-<meta name="description" content="Lagos' favourite sandwich spot. Fresh. Juicy. Delivered Hot." />
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          bg: '#1a1410', card: '#241c17', border: '#3a2e26',
-          muted: '#a89a8e', primary: '#e63946', accent: '#f77f00', whatsapp: '#25d366',
-        },
-        fontFamily: {
-          display: ['"Bebas Neue"', 'sans-serif'],
-          script: ['Caveat', 'cursive'],
-          body: ['Inter', 'sans-serif'],
-        }
-      }
-    }
-  }
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SizzleBox — Loaded Sandwiches & Shawarma</title>
+  <meta name="description" content="SizzleBox — bold, juicy sandwiches, shawarma & box meals made fresh with flavor that hits different." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-neutral-950 text-white font-body">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-orange-500/20">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-display text-2xl tracking-wider text-orange-500">🥪 SIZZLEBOX</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <li><a href="#home" class="hover:text-orange-500 transition">Home</a></li>
+        <li><a href="#menu" class="hover:text-orange-500 transition">Menu</a></li>
+        <li><a href="#about" class="hover:text-orange-500 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-orange-500 transition">Contact</a></li>
+      </ul>
+      <a href="#contact" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-sm font-semibold transition">Order Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-20 hero-bg">
+    <div class="text-center max-w-3xl">
+      <p class="font-script text-3xl text-orange-400 mb-2">flavor that hits different</p>
+      <h1 class="font-display text-6xl md:text-8xl tracking-wide mb-6 leading-none">
+        SIZZLING <span class="text-orange-500">GOOD</span><br/>SANDWICHES
+      </h1>
+      <p class="text-neutral-300 text-lg mb-8 max-w-xl mx-auto">
+        Loaded sandwiches, juicy shawarma, and box meals made fresh — packed with bold flavor in every bite.
+      </p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="#menu" class="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-full font-semibold transition flex items-center gap-2">
+          See Menu <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#contact" class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-full font-semibold transition">
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="font-script text-2xl text-orange-400">our menu</p>
+        <h2 class="font-display text-5xl tracking-wide">TASTE THE <span class="text-orange-500">SIZZLE</span></h2>
+      </div>
+      <div id="menu-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 px-4 bg-neutral-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="font-script text-2xl text-orange-400">about us</p>
+      <h2 class="font-display text-5xl tracking-wide mb-6">BORN TO <span class="text-orange-500">SIZZLE</span></h2>
+      <p class="text-neutral-300 text-lg leading-relaxed">
+        SizzleBox started with one simple idea: sandwiches shouldn't be boring. We pack every order with fresh ingredients, signature sauces, and the kind of flavor that makes you come back for more. From loaded double-deckers to spicy shawarma wraps, every bite is made fresh, made bold, made for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="font-script text-2xl text-orange-400">find us</p>
+      <h2 class="font-display text-5xl tracking-wide mb-10">GET YOUR <span class="text-orange-500">FIX</span></h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-neutral-900 p-6 rounded-2xl border border-orange-500/20">
+          <i data-lucide="map-pin" class="w-8 h-8 text-orange-500 mx-auto mb-3"></i>
+          <h3 class="font-display text-xl mb-2">VISIT</h3>
+          <p class="text-neutral-400 text-sm">123 Sizzle Street<br/>Lagos, Nigeria</p>
+        </div>
+        <div class="bg-neutral-900 p-6 rounded-2xl border border-orange-500/20">
+          <i data-lucide="phone" class="w-8 h-8 text-orange-500 mx-auto mb-3"></i>
+          <h3 class="font-display text-xl mb-2">CALL</h3>
+          <p class="text-neutral-400 text-sm">+234 800 SIZZLE<br/>Open 10am – 11pm</p>
+        </div>
+        <a href="https://wa.me/2348000000000" class="bg-green-600 hover:bg-green-700 p-6 rounded-2xl transition">
+          <i data-lucide="message-circle" class="w-8 h-8 text-white mx-auto mb-3"></i>
+          <h3 class="font-display text-xl mb-2">WHATSAPP</h3>
+          <p class="text-white/90 text-sm">Order Now →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-orange-500/20 py-8 text-center text-neutral-500 text-sm">
+    <p>© 2026 SizzleBox. Made with 🔥 in Lagos.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
